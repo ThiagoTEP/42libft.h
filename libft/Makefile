@@ -6,27 +6,33 @@
 #    By: thevaris <thevaris@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/09 15:41:50 by thevaris          #+#    #+#              #
-#    Updated: 2025/04/09 15:46:13 by thevaris         ###   ########.fr        #
+#    Updated: 2025/04/09 16:39:32 by thevaris         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME= libft.a
 CC= cc
-FLAGS= 
+FLAG= -Wall -Werror -Wextra -Iincludes
 OBJ= $(SRC:.c=.o)
-SRC=
+SRC = ft_isalpha.c\
+			
+AR = ar
+RCS = rcs
+RM= rm -rf
 
+all: $(NAME)
 
+$(NAME): $(OBJ)
+	@$(AR) $(RCS) $(NAME) $(OBJ)
 
-all:
-
-
+$(OBJ): $(SRC)
+	@$(CC) $(FLAGS) -c $(SRC)
 
 clean:
-	@rm -rf $(OBJ)
+	@$(RM) $(OBJ)
 
-fclean:
+fclean: clean
+	@$(RM) $(NAME)
 
-
-re:
+re: fclean all
 
