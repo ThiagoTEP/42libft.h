@@ -6,7 +6,7 @@
 /*   By: thevaris <thevaris@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/11 15:53:57 by thevaris          #+#    #+#             */
-/*   Updated: 2025/04/11 17:07:06 by thevaris         ###   ########.fr       */
+/*   Updated: 2025/04/11 17:16:46 by thevaris         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int main(void)
 	char *x = "testeteste";
 	char *y = "testa";
 
-	printf("%d\n", memcmp(x, y, 0));
+	printf("%d\n", ft_memcmp(x, y, 10));
 	
 	return 0;
 }*/
