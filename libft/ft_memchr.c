@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-void	*memchr(const void *s, int c, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
 	const char	*src;
 	size_t		i;
@@ -33,7 +33,7 @@ void	*memchr(const void *s, int c, size_t n)
 int main(void)
 {
 	char *x = "testar string";
-	char *result = memchr(x, 'i', 20);
+	char *result = ft_memchr(x, 'i', 20);
 	
 	printf("%c\n", *result);
 	printf("%s\n", result);
