@@ -6,7 +6,7 @@
 /*   By: thevaris <thevaris@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 15:04:03 by thevaris          #+#    #+#             */
-/*   Updated: 2025/04/11 16:52:26 by thevaris         ###   ########.fr       */
+/*   Updated: 2025/04/13 15:21:59 by thevaris         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@
 
 /*FT_'s PART I*/
 
-int ft_isalpha(int c);
 int ft_isdigit(int c);
 int ft_isalnum(int c);
 int ft_isascii(int c);
