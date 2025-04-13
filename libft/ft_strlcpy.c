@@ -6,7 +6,7 @@
 /*   By: thevaris <thevaris@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/13 15:30:37 by thevaris          #+#    #+#             */
-/*   Updated: 2025/04/13 15:30:40 by thevaris         ###   ########.fr       */
+/*   Updated: 2025/04/13 17:16:02 by thevaris         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
     return i;
 }
 
-
+/*
 #include <string.h>
 #include <stdio.h>
 int main(void)
@@ -44,4 +44,4 @@ int main(void)
     printf("%ld", strlcpy(y, x, sizeof(y)));
 
     return 0;
-}
+}*/

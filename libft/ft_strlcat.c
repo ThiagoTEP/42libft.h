@@ -6,7 +6,7 @@
 /*   By: thevaris <thevaris@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/13 15:30:31 by thevaris          #+#    #+#             */
-/*   Updated: 2025/04/13 15:30:34 by thevaris         ###   ########.fr       */
+/*   Updated: 2025/04/13 17:16:18 by thevaris         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	return (len_dst + len_src);
 }
 
-
+/*
 #include <stdio.h>
 int main(void)
 {
@@ -49,4 +49,4 @@ int main(void)
     printf("%d\n", result);
     
     return 0;
-}
+}*/

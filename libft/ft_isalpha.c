@@ -6,7 +6,7 @@
 /*   By: thevaris <thevaris@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 19:46:54 by thevaris          #+#    #+#             */
-/*   Updated: 2025/04/08 19:57:51 by thevaris         ###   ########.fr       */
+/*   Updated: 2025/04/13 17:08:16 by thevaris         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ int ft_isalpha(int c)
 	else
 		return(0);
 }
+
 /*
 #include <stdio.h>
 int main(void)
