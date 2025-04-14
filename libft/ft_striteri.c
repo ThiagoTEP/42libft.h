@@ -24,6 +24,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 	}
 }
 
+/*
 #include <stdio.h>
 void increment_char(unsigned int i, char *c)
 {
@@ -38,4 +39,4 @@ int main(void)
 
     printf("%s\n", str);
     return 0;
-}
+}*/
