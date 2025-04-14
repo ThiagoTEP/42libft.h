@@ -23,7 +23,7 @@ int	cw(const char	*str, char c)
 	{
 		while (str[i] == c)
 			i++;
-		if (str[i])
+		if (str[i] != '\0')
 			cw++;
 		while (str[i] && str[i] != c)
 			i++;
@@ -68,3 +68,18 @@ char	**ft_split(char const *s, char c)
 	result = splitter(s, c, result);
 	return (result);
 }
+
+/*
+#include <stdio.h>
+int main(void)
+{
+	char **split = ft_split("a,b,c", ',');
+	
+	int i = 0;
+	while(split[i])
+	{
+		printf("%s\n", split[i]);
+		i++;
+	}
+	return 0;
+}*/
