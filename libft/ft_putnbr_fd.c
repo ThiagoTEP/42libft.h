@@ -31,3 +31,10 @@ void	ft_putnbr_fd(int n, int fd)
 	num = (n % 10) + 48;
 	write(fd, &num, 1);
 }
+
+/*
+int main(void)
+{
+	ft_putnbr_fd(1234, 1);
+	return 0;
+}*/

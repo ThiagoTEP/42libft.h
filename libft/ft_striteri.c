@@ -23,3 +23,19 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 		i++;
 	}
 }
+
+#include <stdio.h>
+void increment_char(unsigned int i, char *c)
+{
+    *c += 1; 
+}
+
+int main(void)
+{
+    char str[] = "libft test";
+
+    ft_striteri(str, increment_char);
+
+    printf("%s\n", str);
+    return 0;
+}
