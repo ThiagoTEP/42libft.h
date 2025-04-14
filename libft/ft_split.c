@@ -35,26 +35,22 @@ char	**splitter(char const *s, char c, char **result)
 {
 	size_t	i;
 	size_t	j;
-	size_t	limit;
 	size_t	start;
+	size_t	limit;
 
-	j = 0;
 	i = 0;
-	limit = 0;
+	j = 0;
 	while (s[i])
 	{
 		while (s[i] == c)
 			i++;
+		if (!s[i])
+			break;
 		start = i;
-		if (s[i] == '\0')
-			break ;
-		while (s[i] != c && s[i])
-		{
+		while (s[i] && s[i] != c)
 			i++;
-			limit++;
-		}
+		limit = i - start;
 		result[j++] = ft_substr(s, start, limit);
-		limit = 0;
 	}
 	result[j] = NULL;
 	return (result);

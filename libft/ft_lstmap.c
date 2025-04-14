@@ -16,12 +16,19 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*nlist;
 	t_list	*nnode;
+	void	*content;
 
 	if (!lst || !f || !del)
 		return (NULL);
 	nlist = NULL;
 	while (lst)
 	{
+		content = f(lst->content);
+		if (!content)
+		{
+			ft_lstclear(&nlist, del);
+			return (NULL);
+		}
 		nnode = ft_lstnew(f(lst->content));
 		if (!nnode)
 		{
