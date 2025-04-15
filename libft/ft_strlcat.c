@@ -37,7 +37,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	return (len_dst + len_src);
 }
 
-/*
+
 #include <stdio.h>
 int main(void)
 {
@@ -46,7 +46,11 @@ int main(void)
 
     size_t result = ft_strlcat(y, x, sizeof(y));
 
-    printf("%d\n", result);
+    printf("%ld\n", result);
     
+	char cat1[10] = "ab"; char cat2[10] = "ab";
+    printf("%lu %lu\n", strlcat(cat1, "cd", 10), ft_strlcat(cat2, "cd", 10));
+    printf("%s %s\n", cat1, cat2);
+
     return 0;
-}*/
+}
