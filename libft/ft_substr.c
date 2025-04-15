@@ -32,3 +32,17 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	}
 	return (substr);
 }
+
+/*
+void print_str_or_null(char *str) {
+    if (str)
+        printf("%s\n", str);
+    else
+        printf("(null)\n");
+}
+
+int main(void)
+{
+	print_str_or_null(ft_substr("libft", 2, 3));
+	return 0;
+}*/
