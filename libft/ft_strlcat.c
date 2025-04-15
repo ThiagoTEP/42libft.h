@@ -37,7 +37,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	return (len_dst + len_src);
 }
 
-
+/*
 #include <stdio.h>
 int main(void)
 {
@@ -53,4 +53,4 @@ int main(void)
     printf("%s %s\n", cat1, cat2);
 
     return 0;
-}
+}*/
