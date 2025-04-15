@@ -70,3 +70,17 @@ char	*ft_itoa(int n)
 	}
 	return (str);
 }
+
+/*
+void print_str_or_null(char *str) {
+    if (str)
+        printf("%s\n", str);
+    else
+        printf("(null)\n");
+}
+
+int main(void)
+{
+	print_str_or_null(ft_itoa(42));
+	return 0;
+}*/
