@@ -39,3 +39,17 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	strjoin[i] = '\0';
 	return (strjoin);
 }
+
+/*
+void print_str_or_null(char *str) {
+    if (str)
+        printf("%s\n", str);
+    else
+        printf("(null)\n");
+}
+
+int main(void)
+{
+	print_str_or_null(ft_strjoin("lib", "ft"));
+	return 0;
+}*/
