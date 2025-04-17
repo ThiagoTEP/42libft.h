@@ -12,23 +12,23 @@
 
 #include "libft.h"
 
-int	cw(const char	*str, char c)
+int	countwords(const char	*str, char c)
 {
 	size_t	i;
-	size_t	cw;
+	size_t	countword;
 
 	i = 0;
-	cw = 0;
+	countword = 0;
 	while (str[i])
 	{
 		while (str[i] == c)
 			i++;
 		if (str[i] != '\0')
-			cw++;
+		countword++;
 		while (str[i] && str[i] != c)
 			i++;
 	}
-	return (cw);
+	return (countword);
 }
 
 char	**splitter(char const *s, char c, char **result)
@@ -62,7 +62,7 @@ char	**ft_split(char const *s, char c)
 
 	if (!s)
 		return (NULL);
-	result = ft_calloc(sizeof(char *), (cw(s, c) + 1));
+	result = ft_calloc(sizeof(char *), (countwords(s, c) + 1));
 	if (!result)
 		return (NULL);
 	result = splitter(s, c, result);
