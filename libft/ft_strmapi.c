@@ -31,3 +31,27 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	strmapi[slen] = '\0';
 	return (strmapi);
 }
+
+/*
+#include <ctype.h> // para toupper
+
+char	to_upper_even(unsigned int i, char c)
+{
+	if (i % 2 == 0)
+		return (char)toupper(c);
+	return c;
+}
+
+int	main(void)
+{
+	const char	*original = "hello, world!";
+	char		*modificada;
+
+	modificada = ft_strmapi(original, to_upper_even);
+	
+	printf("Original:   %s\n", original);
+	printf("Modificada: %s\n", modificada);
+
+	free(modificada);
+	return (0);
+}*/
