@@ -12,24 +12,6 @@
 
 #include "libft.h"
 
-/* char	*ft_strchr(const char *s, int c)
-{
-	int	i;
-
-	i = 0;
-	while (s[i])
-	{
-		if (s[i] == (char)c)
-		{
-			return ((char *)&s[i]);
-		}
-		i++;
-	}
-	if ((char)c == '\0')
-		return ((char *)&s[i]);
-	return (NULL);
-}
- */
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	s1_size;
@@ -51,3 +33,19 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return (NULL);
 	return (str);
 }
+
+/*
+int	main(void)
+{
+	const char	*s1 = "  \t\n---Hello, World!---\n\n  ";
+	const char	*set = " \n\t-";
+	char		*trimmed;
+
+	trimmed = ft_strtrim(s1, set);
+	
+	printf("Original : \"%s\"\n", s1);
+	printf("Trimmed  : \"%s\"\n", trimmed);
+
+	free(trimmed);
+	return (0);
+}*/
