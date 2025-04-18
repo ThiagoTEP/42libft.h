@@ -28,3 +28,24 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	}
 	return (call);
 }
+
+/*
+int	main(void)
+{
+	int	*array;
+	size_t	n = 5;
+	size_t	i;
+
+	array = (int *)ft_calloc(n, sizeof(int));
+	
+	// Verifica se todos os elementos estão zerados
+	i = 0;
+	while(i < n)
+	{
+		printf("array[%zu] = %d\n", i, array[i]);
+		i++;
+	}
+
+	free(array);
+	return (0);
+}*/
