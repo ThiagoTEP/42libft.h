@@ -14,8 +14,21 @@ void print_str_or_null(char *str) {
         printf("(null)\n");
 }
 
+//strmapi
+char	to_upper_even(unsigned int i, char c)
+{
+	if (i % 2 == 0)
+		return (char)toupper(c);
+	return c;
+}
+
+//striteri
+void increment_char(unsigned int i, char *c)
+{
+    *c += 1; 
+}
+
 int main(void) {
-    // Para cada função, fazemos 5 testes com a versão original e 5 com ft_ equivalente
 
     // ft_isalpha
     printf("\n===== ft_isalpha =====\n");
@@ -145,14 +158,24 @@ int main(void) {
 
     // ft_strmapi
     printf("\n===== ft_strmapi =====\n");
-    //print_str_or_null(ft_strmapi("abc", [](unsigned int i, char c){ return c + 1; }));
+    const char	*original = "hello, world!";
+	char		*modificada;
+
+	modificada = ft_strmapi(original, to_upper_even);
+	
+	printf("Original:   %s\n", original);
+	printf("Modificada: %s\n", modificada);
+
+	free(modificada);
 
     // ft_striteri
     printf("\n===== ft_striteri =====\n");
-    char mod[] = "abc";
-    //ft_striteri(mod, [](unsigned int i, char *c){ *c += 1; });
-    printf("%s\n", mod);
+    char str[] = "libft test";
 
+    ft_striteri(str, increment_char);
+
+    printf("%s\n", str);
+    
     // ft_putchar_fd
     printf("\n===== ft_putchar_fd =====\n");
     ft_putchar_fd('X', 1);
