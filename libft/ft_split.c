@@ -6,37 +6,44 @@
 /*   By: thevaris <thevaris@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/13 15:30:04 by thevaris          #+#    #+#             */
-/*   Updated: 2025/04/13 18:48:59 by thevaris         ###   ########.fr       */
+/*   Updated: 2025/04/19 12:48:01 by thevaris         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	countwords(const char	*str, char c)
+int	countwords(const char *str, char c)
 {
-	size_t	i;
-	size_t	countword;
+	int	count;
 
-	i = 0;
-	countword = 0;
-	while (str[i])
+	count = 0;
+	while (*str)
 	{
-		while (str[i] == c)
-			i++;
-		if (str[i] != '\0')
-		countword++;
-		while (str[i] && str[i] != c)
-			i++;
+		while (*str == c)
+			str++;
+		if (*str)
+			count++;
+		while (*str && *str != c)
+			str++;
 	}
-	return (countword);
+	return (count);
 }
 
-char	**splitter(char const *s, char c, char **result)
+char	**allocate_result(const char *s, char c)
+{
+	char	**result;
+	int		word_count;
+
+	word_count = countwords(s, c);
+	result = ft_calloc(word_count + 1, sizeof(char *));
+	return (result);
+}
+
+int	extract_words(char **result, const char *s, char c)
 {
 	size_t	i;
 	size_t	j;
 	size_t	start;
-	size_t	limit;
 
 	i = 0;
 	j = 0;
@@ -44,28 +51,37 @@ char	**splitter(char const *s, char c, char **result)
 	{
 		while (s[i] == c)
 			i++;
-		if (!s[i])
-			break;
+		if (s[i] == '\0')
+			break ;
 		start = i;
 		while (s[i] && s[i] != c)
 			i++;
-		limit = i - start;
-		result[j++] = ft_substr(s, start, limit);
+		result[j] = ft_substr(s, start, i - start);
+		if (!result[j])
+			return (0);
+		j++;
 	}
-	result[j] = NULL;
-	return (result);
+	return (1);
 }
 
 char	**ft_split(char const *s, char c)
 {
 	char	**result;
+	size_t	i;
 
 	if (!s)
 		return (NULL);
-	result = ft_calloc(sizeof(char *), (countwords(s, c) + 1));
+	result = allocate_result(s, c);
 	if (!result)
 		return (NULL);
-	result = splitter(s, c, result);
+	if (!extract_words(result, s, c))
+	{
+		i = 0;
+		while (result[i])
+			free(result[i++]);
+		free(result);
+		return (NULL);
+	}
 	return (result);
 }
 
