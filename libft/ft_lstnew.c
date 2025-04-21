@@ -6,7 +6,7 @@
 /*   By: thevaris <thevaris@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/13 15:29:28 by thevaris          #+#    #+#             */
-/*   Updated: 2025/04/13 18:48:27 by thevaris         ###   ########.fr       */
+/*   Updated: 2025/04/21 16:01:39 by thevaris         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,3 +23,16 @@ t_list	*ft_lstnew(void *content)
 	nnode->next = NULL;
 	return (nnode);
 }
+/*
+#include <stdio.h>
+int main (void)
+{
+	char *str = "Hello, World!";
+
+	t_list *node = ft_lstnew(str);
+
+	printf("%s\n", (char *)node->content);
+	printf("%p\n", (void *)node->next);
+	
+	return 0;
+}*/
