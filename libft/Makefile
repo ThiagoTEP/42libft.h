@@ -6,12 +6,12 @@
 #    By: thevaris <thevaris@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/09 15:41:50 by thevaris          #+#    #+#              #
-#    Updated: 2025/04/21 19:09:38 by thevaris         ###   ########.fr        #
+#    Updated: 2025/04/21 20:00:08 by thevaris         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME= libft.a
-CC= gcc
+CC= cc
 FLAG= -Wall -Werror -Wextra
 OBJ= $(SRC:.c=.o)
 SRC= ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c \
